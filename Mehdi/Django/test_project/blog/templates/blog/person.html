@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Person</title>
+</head>
+<body>
+	<form method="post" action="{% url 'person' %}">
+		{% csrf_token %}
+		<label for="name">Person Name</label><br>
+		<input type="text" name="name"><br>
+		<label for="age">Person Age</label><br>
+		<input type="number" name="age"><br>
+		<input type="submit" value="Save">
+	</form>
+</body>
+</html>

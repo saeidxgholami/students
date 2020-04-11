@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blog Home</title>
+</head>
+<body>
+	<h1>List of the things we learn</h1>
+	<ul>
+		<li>django-admin startproject  --projname--</li>
+		<li>python manage.py startapp --appname--</li>
+		<li>views.py -> the code which render an html</li>
+		<li>urls.py -> a url to a view , a python function</li>
+		<li>We have to install any app we started -> settings.py -> INSTALLED_APPS</li>
+	</ul>
+	{% for post in posts %}
+		<h2>{{ post.title }}</h2>
+		<h4>{{ post.date_created }} - {{ post.author }}</h4>
+		<p>{{ post.content}}</p>
+	{% endfor %}
+	<a href="{% url 'person'%}">Save a Person</a>
+</body>
+</html>
