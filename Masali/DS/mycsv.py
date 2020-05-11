@@ -17,7 +17,7 @@ def read_dict(filename):
 
 # row is a list
 def write(filename, rows):
-	with open(filename, 'w') as f:
+	with open(filename, 'w', newline='') as f:
 		writer = csv.writer(f)
 		writer.writerows(rows)
 
